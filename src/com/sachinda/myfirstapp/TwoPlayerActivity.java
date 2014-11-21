@@ -191,15 +191,8 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    three.setBackgroundResource(R.drawable.bscirclewon);
 							}
 						
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
+						disableAllButtons();
+
 						p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(four.getTag())
@@ -213,17 +206,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								four.setBackgroundResource(R.drawable.bscirclewon);
 								seven.setBackgroundResource(R.drawable.bscirclewon);
 							}
-							
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(nine.getTag())) {
@@ -236,16 +223,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscirclewon);
 								nine.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -253,16 +234,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p2.setAnimation(p2turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -287,17 +262,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    two.setBackgroundResource(R.drawable.bscrosswon);
 							    three.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(four.getTag())
 							&& v.getTag().equals(seven.getTag())) {
@@ -310,17 +279,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							four.setBackgroundResource(R.drawable.bscrosswon);
 							seven.setBackgroundResource(R.drawable.bscrosswon);
 						}
-					
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(nine.getTag())) {
@@ -333,17 +296,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscrosswon);
 								nine.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -351,16 +308,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p1.startAnimation(p1turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -395,17 +346,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    two.setBackgroundResource(R.drawable.bscirclewon);
 							    three.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(eight.getTag())) {
@@ -418,16 +363,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscirclewon);
 								eight.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -435,16 +374,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p2.startAnimation(p2turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -469,17 +402,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    two.setBackgroundResource(R.drawable.bscrosswon);
 							    three.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(eight.getTag())) {
@@ -492,17 +419,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscrosswon);
 								eight.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -510,16 +431,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p1.startAnimation(p1turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -555,16 +470,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    two.setBackgroundResource(R.drawable.bscirclewon);
 							    three.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(seven.getTag())) {
@@ -577,16 +486,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscirclewon);
 							    seven.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(six.getTag())
 							&& v.getTag().equals(nine.getTag())) {
@@ -599,16 +502,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    six.setBackgroundResource(R.drawable.bscirclewon);
 							    nine.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -616,16 +513,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p2.startAnimation(p2turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -649,16 +540,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    two.setBackgroundResource(R.drawable.bscrosswon);
 							    three.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(seven.getTag())) {
@@ -671,16 +556,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscrosswon);
 							    seven.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(six.getTag())
 							&& v.getTag().equals(nine.getTag())) {
@@ -693,16 +572,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    six.setBackgroundResource(R.drawable.bscrosswon);
 							    nine.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -710,16 +583,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p1.startAnimation(p1turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -754,17 +621,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								four.setBackgroundResource(R.drawable.bscirclewon);
 								seven.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(six.getTag())) {
@@ -777,16 +638,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscirclewon);
 							    six.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -794,16 +649,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p2.startAnimation(p2turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -827,17 +676,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								four.setBackgroundResource(R.drawable.bscrosswon);
 								seven.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(six.getTag())) {
@@ -850,16 +693,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscrosswon);
 							    six.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -867,16 +704,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p1.startAnimation(p1turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -909,17 +740,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscirclewon);
 								nine.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(two.getTag())
 							&& v.getTag().equals(eight.getTag())) {
@@ -932,16 +757,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscirclewon);
 								eight.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(three.getTag())
 							&& v.getTag().equals(seven.getTag())) {
@@ -954,16 +773,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscirclewon);
 							    seven.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(four.getTag())
 							&& v.getTag().equals(six.getTag())) {
@@ -976,16 +789,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscirclewon);
 							    six.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -993,16 +800,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p2.startAnimation(p2turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1026,16 +827,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscrosswon);
 								nine.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(two.getTag())
 							&& v.getTag().equals(eight.getTag())) {
@@ -1048,16 +843,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscrosswon);
 								eight.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(three.getTag())
 							&& v.getTag().equals(seven.getTag())) {
@@ -1070,17 +859,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscrosswon);
 							    seven.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(four.getTag())
 							&& v.getTag().equals(six.getTag())) {
@@ -1093,17 +876,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscrosswon);
 							    six.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1111,16 +888,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p1.startAnimation(p1turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1154,17 +925,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    six.setBackgroundResource(R.drawable.bscirclewon);
 							    nine.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(four.getTag())) {
@@ -1177,17 +942,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscirclewon);
 							    six.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1195,16 +954,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p2.startAnimation(p2turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1228,17 +981,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    six.setBackgroundResource(R.drawable.bscrosswon);
 							    nine.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(four.getTag())) {
@@ -1251,17 +998,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscrosswon);
 							    six.setBackgroundResource(R.drawable.bscrosswon);
 							}
-						    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1269,16 +1010,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p1.startAnimation(p1turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1311,17 +1046,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								four.setBackgroundResource(R.drawable.bscirclewon);
 								seven.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(three.getTag())) {
@@ -1334,17 +1063,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscirclewon);
 							    seven.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(eight.getTag())
 							&& v.getTag().equals(nine.getTag())) {
@@ -1357,16 +1080,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    eight.setBackgroundResource(R.drawable.bscirclewon);
 							    nine.setBackgroundResource(R.drawable.bscirclewon);
 							}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1374,16 +1091,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p2.startAnimation(p2turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1407,17 +1118,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								four.setBackgroundResource(R.drawable.bscrosswon);
 								seven.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(three.getTag())) {
@@ -1430,17 +1135,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    five.setBackgroundResource(R.drawable.bscrosswon);
 							    seven.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(eight.getTag())
 							&& v.getTag().equals(nine.getTag())) {
@@ -1453,17 +1152,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    eight.setBackgroundResource(R.drawable.bscrosswon);
 							    nine.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1471,16 +1164,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p1.startAnimation(p1turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1513,17 +1200,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscirclewon);
 								eight.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(seven.getTag())
 							&& v.getTag().equals(nine.getTag())) {
@@ -1536,17 +1217,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    eight.setBackgroundResource(R.drawable.bscirclewon);
 							    nine.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1554,16 +1229,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p2.startAnimation(p2turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1587,17 +1256,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscrosswon);
 								eight.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(seven.getTag())
 							&& v.getTag().equals(nine.getTag())) {
@@ -1610,17 +1273,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    eight.setBackgroundResource(R.drawable.bscrosswon);
 							    nine.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1628,16 +1285,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p1.startAnimation(p1turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1670,17 +1321,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    six.setBackgroundResource(R.drawable.bscirclewon);
 							    nine.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(one.getTag())
 							&& v.getTag().equals(five.getTag())) {
@@ -1693,17 +1338,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscirclewon);
 								nine.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else if (v.getTag().equals(seven.getTag())
 							&& v.getTag().equals(eight.getTag())) {
@@ -1716,17 +1355,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    eight.setBackgroundResource(R.drawable.bscirclewon);
 							    nine.setBackgroundResource(R.drawable.bscirclewon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p1Wins.startAnimation(p1winner);
+
+
+                        disableAllButtons();
+
+                        p1Wins.startAnimation(p1winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1734,16 +1367,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p2.startAnimation(p2turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1767,17 +1394,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    six.setBackgroundResource(R.drawable.bscrosswon);
 							    nine.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(one.getTag())
 							&& v.getTag().equals(five.getTag())) {
@@ -1790,17 +1411,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								five.setBackgroundResource(R.drawable.bscrosswon);
 								nine.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else if (v.getTag().equals(seven.getTag())
 							&& v.getTag().equals(eight.getTag())) {
@@ -1813,17 +1428,11 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							    eight.setBackgroundResource(R.drawable.bscrosswon);
 							    nine.setBackgroundResource(R.drawable.bscrosswon);
 							}
-					    
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						p2Wins.startAnimation(p2winner);
+
+
+                        disableAllButtons();
+
+                        p2Wins.startAnimation(p2winner);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1831,16 +1440,10 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 								|| !eightChk || !nineChk) {
 							p1.startAnimation(p1turn);
 						} else {
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							draw.startAnimation(itsdraw);
+
+                            disableAllButtons();
+
+                            draw.startAnimation(itsdraw);
 							delayDialog();
 						}
 
@@ -1871,6 +1474,19 @@ public class TwoPlayerActivity extends Activity implements View.OnClickListener 
 							}
 						}).setNegativeButton("No", null).show();
 	}
+
+    //disabling all buttons after a win or a draw
+    public void disableAllButtons(){
+        one.setEnabled(false);
+        two.setEnabled(false);
+        three.setEnabled(false);
+        four.setEnabled(false);
+        five.setEnabled(false);
+        six.setEnabled(false);
+        seven.setEnabled(false);
+        eight.setEnabled(false);
+        nine.setEnabled(false);
+    }
 	
 	public void animationSetup(){
 		

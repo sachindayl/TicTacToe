@@ -16,7 +16,9 @@ import android.widget.ImageView;
 
 public class FourInToFourTwoPlayer extends Activity implements View.OnClickListener {
 
-    Button one, two, three, four, five, six, seven, eight, nine;
+    //buttons initialized
+    Button one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen;
+
     boolean oneChk = false;
     boolean twoChk = false;
     boolean threeChk = false;
@@ -27,13 +29,14 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
     boolean eightChk = false;
     boolean nineChk = false;
 
+    //counter to recognize which opponent
     int counter;
 
     String cross = "Cross";
     String circle = "Circle";
     AlertDialog.Builder alert;
     AlertDialog dialog;
-    Intent intent,end;
+    Intent intent, end;
     Thread th;
 
     ImageView startGame;
@@ -78,6 +81,13 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
         seven = (Button) findViewById(R.id.empty_button7);
         eight = (Button) findViewById(R.id.empty_button8);
         nine = (Button) findViewById(R.id.empty_button9);
+        ten = (Button) findViewById(R.id.empty_button10);
+        eleven = (Button) findViewById(R.id.empty_button11);
+        twelve = (Button) findViewById(R.id.empty_button12);
+        thirteen = (Button) findViewById(R.id.empty_button13);
+        fourteen = (Button) findViewById(R.id.empty_button14);
+        fifteen = (Button) findViewById(R.id.empty_button15);
+        sixteen = (Button) findViewById(R.id.empty_button16);
 
         startGame = (ImageView) findViewById(R.id.start_the_game);
         p1 = (ImageView) findViewById(R.id.player_one);
@@ -113,18 +123,33 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
         eight.setEnabled(true);
         nine.setOnClickListener(this);
         nine.setEnabled(true);
+        ten.setOnClickListener(this);
+        ten.setEnabled(true);
+        eleven.setOnClickListener(this);
+        eleven.setEnabled(true);
+        twelve.setOnClickListener(this);
+        twelve.setEnabled(true);
+        thirteen.setOnClickListener(this);
+        thirteen.setEnabled(true);
+        fourteen.setOnClickListener(this);
+        fourteen.setEnabled(true);
+        fifteen.setOnClickListener(this);
+        fifteen.setEnabled(true);
+        sixteen.setOnClickListener(this);
+        sixteen.setEnabled(true);
 
 
         animationSetup();
     }
 
-    public void delayDialog(){
-        th = new Thread(){
-            public void run(){
-                try{
+    //delays the replay or quit dialog box
+    public void delayDialog() {
+        th = new Thread() {
+            public void run() {
+                try {
                     Thread.sleep(2500);
-                    FourInToFourTwoPlayer.this.runOnUiThread(new Runnable(){
-                        public void run (){
+                    FourInToFourTwoPlayer.this.runOnUiThread(new Runnable() {
+                        public void run() {
                             alert = new AlertDialog.Builder(FourInToFourTwoPlayer.this);
                             alert.setMessage("Do you want to start a new game?")
                                     .setCancelable(false)
@@ -151,8 +176,7 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             dialog = alert.show();
                         }
                     });
-                }
-                catch (InterruptedException e){
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
@@ -161,9 +185,10 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
         th.start();
     }
 
-
+    //shows what happens after button click
     @Override
     public void onClick(View v) {
+        //using style to recognize which theme is being used
         int style = ((GlobalVariable) this.getApplication()).getStyle();
         switch (v.getId()) {
             case R.id.empty_button:
@@ -171,80 +196,65 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 if (one.isEnabled()) {
                     oneChk = true;
                     if (counter == 0) {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecircle);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
 
+                        //checks for 1,2,3,4 pattern
                         if (v.getTag().equals(two.getTag())
-                                && v.getTag().equals(three.getTag())) {
-                            if(style == 1){
+                                && v.getTag().equals(three.getTag()) && v.getTag().equals(four.getTag())) {
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcircle);
                                 two.setBackgroundResource(R.drawable.redcircle);
                                 three.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                                four.setBackgroundResource(R.drawable.redcircle);
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscirclewon);
                                 two.setBackgroundResource(R.drawable.bscirclewon);
                                 three.setBackgroundResource(R.drawable.bscirclewon);
+                                four.setBackgroundResource(R.drawable.bscirclewon);
                             }
-
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            //locks all buttons after there is a winner
+                            disableAllButtons();
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
-                        } else if (v.getTag().equals(four.getTag())
-                                && v.getTag().equals(seven.getTag())) {
-                            if(style == 1){
+
+                        } else if (v.getTag().equals(five.getTag())
+                                && v.getTag().equals(nine.getTag()) && v.getTag().equals(thirteen.getTag())) {
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcircle);
-                                four.setBackgroundResource(R.drawable.redcircle);
-                                seven.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                                five.setBackgroundResource(R.drawable.redcircle);
+                                nine.setBackgroundResource(R.drawable.redcircle);
+                                thirteen.setBackgroundResource(R.drawable.redcircle);
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscirclewon);
-                                four.setBackgroundResource(R.drawable.bscirclewon);
-                                seven.setBackgroundResource(R.drawable.bscirclewon);
+                                five.setBackgroundResource(R.drawable.bscirclewon);
+                                nine.setBackgroundResource(R.drawable.bscirclewon);
+                                thirteen.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 nine.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 nine.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else {
@@ -253,15 +263,8 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p2.setAnimation(p2turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -269,80 +272,59 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
 
                     } else {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecross);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
                         if (v.getTag().equals(two.getTag())
                                 && v.getTag().equals(three.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcross);
                                 two.setBackgroundResource(R.drawable.redcross);
                                 three.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscrosswon);
                                 two.setBackgroundResource(R.drawable.bscrosswon);
                                 three.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(four.getTag())
                                 && v.getTag().equals(seven.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcross);
                                 four.setBackgroundResource(R.drawable.redcross);
                                 seven.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscrosswon);
                                 four.setBackgroundResource(R.drawable.bscrosswon);
                                 seven.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 nine.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 nine.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else {
@@ -351,15 +333,8 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p1.startAnimation(p1turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -377,56 +352,42 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 if (two.isEnabled()) {
                     twoChk = true;
                     if (counter == 0) {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.blacksquarecircle);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
                         if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(three.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcircle);
                                 two.setBackgroundResource(R.drawable.redcircle);
                                 three.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscirclewon);
                                 two.setBackgroundResource(R.drawable.bscirclewon);
                                 three.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(eight.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 two.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 eight.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 two.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 eight.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else {
@@ -435,15 +396,8 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p2.startAnimation(p2turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -451,57 +405,43 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
 
                     } else {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.blacksquarecross);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
                         if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(three.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcross);
                                 two.setBackgroundResource(R.drawable.redcross);
                                 three.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscrosswon);
                                 two.setBackgroundResource(R.drawable.bscrosswon);
                                 three.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(eight.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 two.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 eight.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 two.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 eight.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else {
@@ -510,15 +450,8 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p1.startAnimation(p1turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -536,9 +469,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 if (three.isEnabled()) {
                     threeChk = true;
                     if (counter == 0) {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecircle);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecircle);
                         }
                         counter++;
@@ -546,68 +479,47 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
 
                         if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(two.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcircle);
                                 two.setBackgroundResource(R.drawable.redcircle);
                                 three.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscirclewon);
                                 two.setBackgroundResource(R.drawable.bscirclewon);
                                 three.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(seven.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 seven.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 seven.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(six.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcircle);
                                 six.setBackgroundResource(R.drawable.redcircle);
                                 nine.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscirclewon);
                                 six.setBackgroundResource(R.drawable.bscirclewon);
                                 nine.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else {
@@ -616,92 +528,64 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p2.startAnimation(p2turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
 
                         }
                     } else {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecross);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
                         if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(two.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcross);
                                 two.setBackgroundResource(R.drawable.redcross);
                                 three.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscrosswon);
                                 two.setBackgroundResource(R.drawable.bscrosswon);
                                 three.setBackgroundResource(R.drawable.bscrosswon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(seven.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 seven.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 seven.setBackgroundResource(R.drawable.bscrosswon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(six.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcross);
                                 six.setBackgroundResource(R.drawable.redcross);
                                 nine.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscrosswon);
                                 six.setBackgroundResource(R.drawable.bscrosswon);
                                 nine.setBackgroundResource(R.drawable.bscrosswon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else {
@@ -710,15 +594,8 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p1.startAnimation(p1turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -736,56 +613,42 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 if (four.isEnabled()) {
                     fourChk = true;
                     if (counter == 0) {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.blacksquarecircle);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
                         if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(seven.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcircle);
                                 four.setBackgroundResource(R.drawable.redcircle);
                                 seven.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscirclewon);
                                 four.setBackgroundResource(R.drawable.bscirclewon);
                                 seven.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(six.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 four.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 six.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 four.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 six.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else {
@@ -794,71 +657,50 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p2.startAnimation(p2turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
 
                         }
                     } else {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.blacksquarecross);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
                         if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(seven.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcross);
                                 four.setBackgroundResource(R.drawable.redcross);
                                 seven.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscrosswon);
                                 four.setBackgroundResource(R.drawable.bscrosswon);
                                 seven.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(six.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 four.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 six.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 four.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 six.setBackgroundResource(R.drawable.bscrosswon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else {
@@ -867,15 +709,8 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p1.startAnimation(p1turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -890,9 +725,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 if (five.isEnabled()) {
                     fiveChk = true;
                     if (counter == 0) {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecircle);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecircle);
                         }
                         counter++;
@@ -900,91 +735,64 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
 
                         if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 nine.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 nine.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(two.getTag())
                                 && v.getTag().equals(eight.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 two.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 eight.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 two.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 eight.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(three.getTag())
                                 && v.getTag().equals(seven.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 seven.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 seven.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(four.getTag())
                                 && v.getTag().equals(six.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 four.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 six.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 four.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 six.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else {
@@ -993,116 +801,81 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p2.startAnimation(p2turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
 
                         }
                     } else {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecross);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
                         if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 nine.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 nine.setBackgroundResource(R.drawable.bscrosswon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(two.getTag())
                                 && v.getTag().equals(eight.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 two.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 eight.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 two.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 eight.setBackgroundResource(R.drawable.bscrosswon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(three.getTag())
                                 && v.getTag().equals(seven.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 seven.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 seven.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(four.getTag())
                                 && v.getTag().equals(six.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 four.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 six.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 four.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 six.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else {
@@ -1111,15 +884,8 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p1.startAnimation(p1turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -1136,57 +902,43 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 if (six.isEnabled()) {
                     sixChk = true;
                     if (counter == 0) {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.blacksquarecircle);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
                         if (v.getTag().equals(three.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcircle);
                                 six.setBackgroundResource(R.drawable.redcircle);
                                 nine.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscirclewon);
                                 six.setBackgroundResource(R.drawable.bscirclewon);
                                 nine.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(four.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 four.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 six.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 four.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 six.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else {
@@ -1195,72 +947,51 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p2.startAnimation(p2turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
 
                         }
                     } else {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.blacksquarecross);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
                         if (v.getTag().equals(three.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcross);
                                 six.setBackgroundResource(R.drawable.redcross);
                                 nine.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscrosswon);
                                 six.setBackgroundResource(R.drawable.bscrosswon);
                                 nine.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(four.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 four.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 six.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 four.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 six.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else {
@@ -1269,15 +1000,8 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p1.startAnimation(p1turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -1293,79 +1017,59 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 if (seven.isEnabled()) {
                     sevenChk = true;
                     if (counter == 0) {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecircle);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
                         if (v.getTag().equals(four.getTag())
                                 && v.getTag().equals(one.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcircle);
                                 four.setBackgroundResource(R.drawable.redcircle);
                                 seven.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscirclewon);
                                 four.setBackgroundResource(R.drawable.bscirclewon);
                                 seven.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(three.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 seven.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 seven.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(eight.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 seven.setBackgroundResource(R.drawable.redcircle);
                                 eight.setBackgroundResource(R.drawable.redcircle);
                                 nine.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 seven.setBackgroundResource(R.drawable.bscirclewon);
                                 eight.setBackgroundResource(R.drawable.bscirclewon);
                                 nine.setBackgroundResource(R.drawable.bscirclewon);
                             }
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else {
@@ -1374,95 +1078,71 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p2.startAnimation(p2turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
 
                         }
                     } else {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecross);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
                         if (v.getTag().equals(four.getTag())
                                 && v.getTag().equals(one.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcross);
                                 four.setBackgroundResource(R.drawable.redcross);
                                 seven.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscrosswon);
                                 four.setBackgroundResource(R.drawable.bscrosswon);
                                 seven.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(three.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 seven.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 seven.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(eight.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 seven.setBackgroundResource(R.drawable.redcross);
                                 eight.setBackgroundResource(R.drawable.redcross);
                                 nine.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 seven.setBackgroundResource(R.drawable.bscrosswon);
                                 eight.setBackgroundResource(R.drawable.bscrosswon);
                                 nine.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else {
@@ -1471,15 +1151,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p1.startAnimation(p1turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -1495,57 +1169,45 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 if (eight.isEnabled()) {
                     eightChk = true;
                     if (counter == 0) {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.blacksquarecircle);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
                         if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(two.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 two.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 eight.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 two.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 eight.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(seven.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 seven.setBackgroundResource(R.drawable.redcircle);
                                 eight.setBackgroundResource(R.drawable.redcircle);
                                 nine.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 seven.setBackgroundResource(R.drawable.bscirclewon);
                                 eight.setBackgroundResource(R.drawable.bscirclewon);
                                 nine.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else {
@@ -1554,72 +1216,54 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p2.startAnimation(p2turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
 
                         }
                     } else {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.blacksquarecross);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
                         if (v.getTag().equals(five.getTag())
                                 && v.getTag().equals(two.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 two.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 eight.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 two.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 eight.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(seven.getTag())
                                 && v.getTag().equals(nine.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 seven.setBackgroundResource(R.drawable.redcross);
                                 eight.setBackgroundResource(R.drawable.redcross);
                                 nine.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 seven.setBackgroundResource(R.drawable.bscrosswon);
                                 eight.setBackgroundResource(R.drawable.bscrosswon);
                                 nine.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else {
@@ -1628,15 +1272,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p1.startAnimation(p1turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -1652,80 +1290,62 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 if (nine.isEnabled()) {
                     nineChk = true;
                     if (counter == 0) {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecircle);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
                         if (v.getTag().equals(three.getTag())
                                 && v.getTag().equals(six.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcircle);
                                 six.setBackgroundResource(R.drawable.redcircle);
                                 nine.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscirclewon);
                                 six.setBackgroundResource(R.drawable.bscirclewon);
                                 nine.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(five.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcircle);
                                 five.setBackgroundResource(R.drawable.redcircle);
                                 nine.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscirclewon);
                                 five.setBackgroundResource(R.drawable.bscirclewon);
                                 nine.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else if (v.getTag().equals(seven.getTag())
                                 && v.getTag().equals(eight.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 seven.setBackgroundResource(R.drawable.redcircle);
                                 eight.setBackgroundResource(R.drawable.redcircle);
                                 nine.setBackgroundResource(R.drawable.redcircle);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 seven.setBackgroundResource(R.drawable.bscirclewon);
                                 eight.setBackgroundResource(R.drawable.bscirclewon);
                                 nine.setBackgroundResource(R.drawable.bscirclewon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p1Wins.startAnimation(p1winner);
                             delayDialog();
                         } else {
@@ -1734,95 +1354,71 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p2.startAnimation(p2turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
 
                         }
                     } else {
-                        if(style == 1){
+                        if (style == 1) {
                             v.setBackgroundResource(R.drawable.redsquarecross);
-                        }else if(style == 2){
+                        } else if (style == 2) {
                             v.setBackgroundResource(R.drawable.bsbluesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
                         if (v.getTag().equals(three.getTag())
                                 && v.getTag().equals(six.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 three.setBackgroundResource(R.drawable.redcross);
                                 six.setBackgroundResource(R.drawable.redcross);
                                 nine.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 three.setBackgroundResource(R.drawable.bscrosswon);
                                 six.setBackgroundResource(R.drawable.bscrosswon);
                                 nine.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(one.getTag())
                                 && v.getTag().equals(five.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 one.setBackgroundResource(R.drawable.redcross);
                                 five.setBackgroundResource(R.drawable.redcross);
                                 nine.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 one.setBackgroundResource(R.drawable.bscrosswon);
                                 five.setBackgroundResource(R.drawable.bscrosswon);
                                 nine.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else if (v.getTag().equals(seven.getTag())
                                 && v.getTag().equals(eight.getTag())) {
-                            if(style == 1){
+                            if (style == 1) {
                                 seven.setBackgroundResource(R.drawable.redcross);
                                 eight.setBackgroundResource(R.drawable.redcross);
                                 nine.setBackgroundResource(R.drawable.redcross);
-                            }else if(style == 2){
+                            } else if (style == 2) {
                                 seven.setBackgroundResource(R.drawable.bscrosswon);
                                 eight.setBackgroundResource(R.drawable.bscrosswon);
                                 nine.setBackgroundResource(R.drawable.bscrosswon);
                             }
 
-                            one.setEnabled(false);
-                            two.setEnabled(false);
-                            three.setEnabled(false);
-                            four.setEnabled(false);
-                            five.setEnabled(false);
-                            six.setEnabled(false);
-                            seven.setEnabled(false);
-                            eight.setEnabled(false);
-                            nine.setEnabled(false);
+
+                            disableAllButtons();
+
                             p2Wins.startAnimation(p2winner);
                             delayDialog();
                         } else {
@@ -1831,15 +1427,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                                     || !eightChk || !nineChk) {
                                 p1.startAnimation(p1turn);
                             } else {
-                                one.setEnabled(false);
-                                two.setEnabled(false);
-                                three.setEnabled(false);
-                                four.setEnabled(false);
-                                five.setEnabled(false);
-                                six.setEnabled(false);
-                                seven.setEnabled(false);
-                                eight.setEnabled(false);
-                                nine.setEnabled(false);
+
+                                disableAllButtons();
+
                                 draw.startAnimation(itsdraw);
                                 delayDialog();
                             }
@@ -1872,7 +1462,25 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }).setNegativeButton("No", null).show();
     }
 
-    public void animationSetup(){
+    public void disableAllButtons(){
+        one.setEnabled(false);
+        two.setEnabled(false);
+        three.setEnabled(false);
+        four.setEnabled(false);
+        five.setEnabled(false);
+        six.setEnabled(false);
+        seven.setEnabled(false);
+        eight.setEnabled(false);
+        nine.setEnabled(false);
+        ten.setEnabled(false);
+        eleven.setEnabled(false);
+        twelve.setEnabled(false);
+        thirteen.setEnabled(false);
+        fourteen.setEnabled(false);
+        fifteen.setEnabled(false);
+        sixteen.setEnabled(false);
+    }
+    public void animationSetup() {
 
 
         startTheGame.setDuration(3000);
@@ -1881,11 +1489,13 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
             public void onAnimationEnd(Animation a) {
                 startGame.setVisibility(View.GONE);
             }
+
             @Override
             public void onAnimationStart(Animation animation) {
                 // TODO Auto-generated method stub
 
             }
+
             @Override
             public void onAnimationRepeat(Animation animation) {
                 // TODO Auto-generated method stub
@@ -1893,7 +1503,6 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
             }
         });
         startGame.setAnimation(startTheGame);
-
 
 
         p1turn.setDuration(1000);
@@ -1904,18 +1513,19 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
 
                 p1.setVisibility(View.GONE);
             }
+
             @Override
             public void onAnimationStart(Animation animation) {
                 // TODO Auto-generated method stub
 
             }
+
             @Override
             public void onAnimationRepeat(Animation animation) {
                 // TODO Auto-generated method stub
 
             }
         });
-
 
 
         p2turn.setDuration(1000);
@@ -1942,7 +1552,6 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
         });
 
 
-
         p1winner.setDuration(5000);
         p1winner.setStartOffset(1000);
         p1winner.setAnimationListener(new AnimationListener() {
@@ -1950,18 +1559,19 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
             public void onAnimationEnd(Animation a) {
                 p1Wins.setVisibility(View.GONE);
             }
+
             @Override
             public void onAnimationStart(Animation animation) {
                 // TODO Auto-generated method stub
 
             }
+
             @Override
             public void onAnimationRepeat(Animation animation) {
                 // TODO Auto-generated method stub
 
             }
         });
-
 
 
         p2winner.setDuration(5000);
@@ -1971,18 +1581,19 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
             public void onAnimationEnd(Animation a) {
                 p2Wins.setVisibility(View.GONE);
             }
+
             @Override
             public void onAnimationStart(Animation animation) {
                 // TODO Auto-generated method stub
 
             }
+
             @Override
             public void onAnimationRepeat(Animation animation) {
                 // TODO Auto-generated method stub
 
             }
         });
-
 
 
         itsdraw.setStartOffset(1000);
@@ -1995,11 +1606,13 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                 p1Wins.setVisibility(View.GONE);
                 p2Wins.setVisibility(View.GONE);
             }
+
             @Override
             public void onAnimationStart(Animation animation) {
                 // TODO Auto-generated method stub
 
             }
+
             @Override
             public void onAnimationRepeat(Animation animation) {
                 // TODO Auto-generated method stub

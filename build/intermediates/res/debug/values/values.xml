@@ -560,6 +560,7 @@
     <string name="themeselect">Select Theme</string>
     <string name="this_is_settings">You came to the settings page</string>
     <string name="title_activity_display_message">My Message</string>
+    <string name="title_activity_four_in_to_four_two_player">FourInToFourTwoPlayer</string>
     <string name="title_activity_main">Main Activity</string>
     <string name="title_activity_multiplayer">Multiplayer</string>
     <string name="title_activity_one_player">OnePlayerActivity</string>

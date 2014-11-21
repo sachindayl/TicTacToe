@@ -205,16 +205,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 						    three.setBackgroundResource(R.drawable.bscirclewon);
 						}
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(four.getTag())
 							&& v.getTag().equals(seven.getTag())) {
 						if(style == 1){
@@ -226,17 +220,11 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							four.setBackgroundResource(R.drawable.bscirclewon);
 							seven.setBackgroundResource(R.drawable.bscirclewon);
 						}
-						
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						yWin.startAnimation(youWin);
+
+
+                        disableAllButtons();
+
+                        yWin.startAnimation(youWin);
 						delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(nine.getTag())) {
@@ -249,16 +237,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							five.setBackgroundResource(R.drawable.bscirclewon);
 							nine.setBackgroundResource(R.drawable.bscirclewon);
 						}
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						yWin.startAnimation(youWin);
+
+                        disableAllButtons();
+
+                        yWin.startAnimation(youWin);
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -270,16 +252,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							computerMove();
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -306,16 +282,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 						
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(four.getTag())
 							&& v.getTag().equals(seven.getTag())) {
 						if(style == 1){
@@ -329,16 +299,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 						
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(nine.getTag())) {
 						if(style == 1){
@@ -352,16 +316,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 						
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -370,16 +328,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 						
 					}
@@ -415,16 +367,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 						
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(eight.getTag())) {
 						if(style == 1){
@@ -437,16 +383,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							eight.setBackgroundResource(R.drawable.bscirclewon);
 						}
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -456,16 +396,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							computerMove();
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -492,16 +426,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(eight.getTag())) {
 						if(style == 1){
@@ -515,16 +443,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 						
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -534,16 +456,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 						
 					}
@@ -579,16 +495,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 						
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(seven.getTag())) {
 						if(style == 1){
@@ -602,16 +512,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 						}
 						
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(six.getTag())
 							&& v.getTag().equals(nine.getTag())) {
 						if(style == 1){
@@ -624,16 +528,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 						    nine.setBackgroundResource(R.drawable.bscirclewon);
 						}
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -643,16 +541,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							computerMove();
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -678,16 +570,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(seven.getTag())) {
 						if(style == 1){
@@ -701,16 +587,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(six.getTag())
 							&& v.getTag().equals(nine.getTag())) {
 						if(style == 1){
@@ -724,16 +604,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -743,16 +617,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -787,16 +655,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(six.getTag())) {
 						if(style == 1){
@@ -809,16 +671,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 						    six.setBackgroundResource(R.drawable.bscirclewon);
 						}
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -828,16 +684,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							computerMove();
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -863,16 +713,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 						
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(six.getTag())) {
 						if(style == 1){
@@ -886,16 +730,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -905,16 +743,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -949,16 +781,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(two.getTag())
 							&& v.getTag().equals(eight.getTag())) {
 						if(style == 1){
@@ -972,16 +798,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(three.getTag())
 							&& v.getTag().equals(seven.getTag())) {
 						if(style == 1){
@@ -995,16 +815,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(four.getTag())
 							&& v.getTag().equals(six.getTag())) {
 						if(style == 1){
@@ -1018,16 +832,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 						}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -1036,16 +844,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							computerMove();
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -1071,16 +873,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(two.getTag())
 							&& v.getTag().equals(eight.getTag())) {
 						if(style == 1){
@@ -1094,16 +890,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(three.getTag())
 							&& v.getTag().equals(seven.getTag())) {
 						if(style == 1){
@@ -1117,16 +907,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(four.getTag())
 							&& v.getTag().equals(six.getTag())) {
 						if(style == 1){
@@ -1141,16 +925,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 						    
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -1160,16 +938,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -1204,16 +976,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(four.getTag())) {
 						if(style == 1){
@@ -1228,16 +994,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 						    
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -1246,16 +1006,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							computerMove();
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -1281,16 +1035,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(four.getTag())) {
 						if(style == 1){
@@ -1305,16 +1053,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 						    
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -1324,16 +1066,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -1368,16 +1104,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(three.getTag())) {
 						if(style == 1){
@@ -1391,16 +1121,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(eight.getTag())
 							&& v.getTag().equals(nine.getTag())) {
 						if(style == 1){
@@ -1413,15 +1137,9 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 						    nine.setBackgroundResource(R.drawable.bscirclewon);
 						}
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
+
+                        disableAllButtons();
+
 						delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
@@ -1431,16 +1149,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							computerMove();
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -1466,16 +1178,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(five.getTag())
 							&& v.getTag().equals(three.getTag())) {
 						if(style == 1){
@@ -1489,16 +1195,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(eight.getTag())
 							&& v.getTag().equals(nine.getTag())) {
 						if(style == 1){
@@ -1512,16 +1212,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -1531,16 +1225,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -1575,16 +1263,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(seven.getTag())
 							&& v.getTag().equals(nine.getTag())) {
 						if(style == 1){
@@ -1598,16 +1280,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -1616,16 +1292,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							computerMove();
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -1651,16 +1321,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(seven.getTag())
 							&& v.getTag().equals(nine.getTag())) {
 						if(style == 1){
@@ -1674,16 +1338,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -1693,16 +1351,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -1737,16 +1389,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(one.getTag())
 							&& v.getTag().equals(five.getTag())) {
 						if(style == 1){
@@ -1760,16 +1406,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(seven.getTag())
 							&& v.getTag().equals(eight.getTag())) {
 						if(style == 1){
@@ -1783,16 +1423,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						yWin.startAnimation(youWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -1801,16 +1435,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							computerMove();
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -1836,16 +1464,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(one.getTag())
 							&& v.getTag().equals(five.getTag())) {
 						if(style == 1){
@@ -1859,16 +1481,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else if (v.getTag().equals(seven.getTag())
 							&& v.getTag().equals(eight.getTag())) {
 						if(style == 1){
@@ -1882,16 +1498,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 							}
 					    
 						cWin.startAnimation(compWin);
-						one.setEnabled(false);
-						two.setEnabled(false);
-						three.setEnabled(false);
-						four.setEnabled(false);
-						five.setEnabled(false);
-						six.setEnabled(false);
-						seven.setEnabled(false);
-						eight.setEnabled(false);
-						nine.setEnabled(false);
-						delayDialog();
+
+                        disableAllButtons();
+
+                        delayDialog();
 					} else {
 						if (!oneChk || !twoChk || !threeChk || !fourChk
 								|| !fiveChk || !sixChk || !sevenChk
@@ -1901,16 +1511,10 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 
 						} else {
 							draw.startAnimation(itsdraw);
-							one.setEnabled(false);
-							two.setEnabled(false);
-							three.setEnabled(false);
-							four.setEnabled(false);
-							five.setEnabled(false);
-							six.setEnabled(false);
-							seven.setEnabled(false);
-							eight.setEnabled(false);
-							nine.setEnabled(false);
-							delayDialog();
+
+                            disableAllButtons();
+
+                            delayDialog();
 						}
 
 					}
@@ -2092,6 +1696,19 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 		});
 
 	}
+
+    //disabling all buttons after a win or a draw
+    public void disableAllButtons(){
+        one.setEnabled(false);
+        two.setEnabled(false);
+        three.setEnabled(false);
+        four.setEnabled(false);
+        five.setEnabled(false);
+        six.setEnabled(false);
+        seven.setEnabled(false);
+        eight.setEnabled(false);
+        nine.setEnabled(false);
+    }
 
 	private void computerMove() {
 		

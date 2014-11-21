@@ -1034,34 +1034,36 @@ containing a value of this type.
         public static final int abc_popup_menu_item_layout=0x7f030014;
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
-        public static final int activity_multiplayer=0x7f030017;
-        public static final int activity_one_player=0x7f030018;
-        public static final int activity_one_player_activity2=0x7f030019;
-        public static final int activity_one_player_activity3=0x7f03001a;
-        public static final int activity_one_player_activity4=0x7f03001b;
-        public static final int activity_one_player_activity5=0x7f03001c;
-        public static final int activity_one_player_activity6=0x7f03001d;
-        public static final int activity_settings=0x7f03001e;
-        public static final int blue_silver_settings_activity=0x7f03001f;
-        public static final int bsstart_screen=0x7f030020;
-        public static final int game_start=0x7f030021;
-        public static final int splash=0x7f030022;
-        public static final int start_screen=0x7f030023;
-        public static final int support_simple_spinner_dropdown_item=0x7f030024;
+        public static final int activity_four_in_to_four_two_player=0x7f030017;
+        public static final int activity_multiplayer=0x7f030018;
+        public static final int activity_one_player=0x7f030019;
+        public static final int activity_one_player_activity2=0x7f03001a;
+        public static final int activity_one_player_activity3=0x7f03001b;
+        public static final int activity_one_player_activity4=0x7f03001c;
+        public static final int activity_one_player_activity5=0x7f03001d;
+        public static final int activity_one_player_activity6=0x7f03001e;
+        public static final int activity_settings=0x7f03001f;
+        public static final int blue_silver_settings_activity=0x7f030020;
+        public static final int bsstart_screen=0x7f030021;
+        public static final int game_start=0x7f030022;
+        public static final int splash=0x7f030023;
+        public static final int start_screen=0x7f030024;
+        public static final int support_simple_spinner_dropdown_item=0x7f030025;
     }
     public static final class menu {
         public static final int action_bar=0x7f0c0000;
         public static final int display_message=0x7f0c0001;
         public static final int main=0x7f0c0002;
-        public static final int multiplayer=0x7f0c0003;
-        public static final int one_player=0x7f0c0004;
-        public static final int one_player_activity2=0x7f0c0005;
-        public static final int one_player_activity3=0x7f0c0006;
-        public static final int one_player_activity4=0x7f0c0007;
-        public static final int one_player_activity6=0x7f0c0008;
-        public static final int one_player_activityfive=0x7f0c0009;
-        public static final int settings=0x7f0c000a;
-        public static final int settings_page=0x7f0c000b;
+        public static final int menu_four_in_to_four_two_player=0x7f0c0003;
+        public static final int multiplayer=0x7f0c0004;
+        public static final int one_player=0x7f0c0005;
+        public static final int one_player_activity2=0x7f0c0006;
+        public static final int one_player_activity3=0x7f0c0007;
+        public static final int one_player_activity4=0x7f0c0008;
+        public static final int one_player_activity6=0x7f0c0009;
+        public static final int one_player_activityfive=0x7f0c000a;
+        public static final int settings=0x7f0c000b;
+        public static final int settings_page=0x7f0c000c;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f0a0000;
@@ -1103,18 +1105,19 @@ containing a value of this type.
         public static final int themeselect=0x7f0a0024;
         public static final int this_is_settings=0x7f0a0025;
         public static final int title_activity_display_message=0x7f0a0026;
-        public static final int title_activity_main=0x7f0a0027;
-        public static final int title_activity_multiplayer=0x7f0a0028;
-        public static final int title_activity_one_player=0x7f0a0029;
-        public static final int title_activity_one_player_activity2=0x7f0a002a;
-        public static final int title_activity_one_player_activity3=0x7f0a002b;
-        public static final int title_activity_one_player_activity4=0x7f0a002c;
-        public static final int title_activity_one_player_activity6=0x7f0a002d;
-        public static final int title_activity_one_player_activityfive=0x7f0a002e;
-        public static final int title_activity_settings=0x7f0a002f;
-        public static final int title_activity_settings_page=0x7f0a0030;
-        public static final int user_turn=0x7f0a0031;
-        public static final int you_winner=0x7f0a0032;
+        public static final int title_activity_four_in_to_four_two_player=0x7f0a0027;
+        public static final int title_activity_main=0x7f0a0028;
+        public static final int title_activity_multiplayer=0x7f0a0029;
+        public static final int title_activity_one_player=0x7f0a002a;
+        public static final int title_activity_one_player_activity2=0x7f0a002b;
+        public static final int title_activity_one_player_activity3=0x7f0a002c;
+        public static final int title_activity_one_player_activity4=0x7f0a002d;
+        public static final int title_activity_one_player_activity6=0x7f0a002e;
+        public static final int title_activity_one_player_activityfive=0x7f0a002f;
+        public static final int title_activity_settings=0x7f0a0030;
+        public static final int title_activity_settings_page=0x7f0a0031;
+        public static final int user_turn=0x7f0a0032;
+        public static final int you_winner=0x7f0a0033;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
