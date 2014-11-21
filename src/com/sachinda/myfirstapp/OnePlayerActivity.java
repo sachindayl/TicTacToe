@@ -1710,6 +1710,7 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
         nine.setEnabled(false);
     }
 
+    //computers moves
 	private void computerMove() {
 		
 		Thread delaying = new Thread() {
