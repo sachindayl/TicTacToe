@@ -10,3 +10,6 @@ Three into three One player mode working.
 Three into three Two player mode working. 
 Online Mode is still under development. 
 Four into four mode for two players is under development.
+
+This app is open source and anyone can use it if they want to. It is officially licenced under Apache 2 licence
+http://www.apache.org/licenses/LICENSE-2.0
