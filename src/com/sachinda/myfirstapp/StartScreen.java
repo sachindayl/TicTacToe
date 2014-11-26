@@ -17,7 +17,7 @@ public class StartScreen extends Activity {
 	public static final String PREF_FILE_NAME = "PrefFile";
 	AlertDialog.Builder alert;
 	AlertDialog dialog;
-	Intent oneP, twoP, settings;
+	Intent boardType, settings;
 	Button startBtn, settingsBtn;
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,56 +30,24 @@ public class StartScreen extends Activity {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		
 		// Restore preferences
-	       SharedPreferences setpref = getSharedPreferences(PREF_FILE_NAME, 0);
-	       int styleType = setpref.getInt("Style", 1);
+	       SharedPreferences setPref = getSharedPreferences(PREF_FILE_NAME, 0);
+	       int styleType = setPref.getInt("Style", 1);
 	       ((GlobalVariable) this.getApplication()).setStyle(styleType);
 		
 		int style = ((GlobalVariable) this.getApplication()).getStyle();
 		if (style == 1) {
 			setContentView(R.layout.start_screen);
 		} else if (style == 2) {
-			setContentView(R.layout.bsstart_screen);
+			setContentView(R.layout.fairy_tale_start_screen);
 		}
 
 		startBtn = (Button) findViewById(R.id.start_button);
 		startBtn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Log.i("clicks", "You clicked start button");
-
-				alert = new AlertDialog.Builder(StartScreen.this);
-				alert.setMessage("One Player or Two Player?");
-
-				alert.setPositiveButton("Two Player",
-						new DialogInterface.OnClickListener() {
-
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) {
-
-								twoP = new Intent(StartScreen.this,
-										TwoPlayerActivity.class);
-								finish();
-								startActivity(twoP);
-
-							}
-						});
-				alert.setNeutralButton("One Player",
-						new DialogInterface.OnClickListener() {
-
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) {
-								oneP = new Intent(StartScreen.this,
-										OnePlayerActivity.class);
-								finish();
-								startActivity(oneP);
-
-							}
-						});
-				dialog = alert.create();
-
-				dialog.show();
+                boardType = new Intent(StartScreen.this, BoardType.class);
+                StartScreen.this.finish();
+                startActivity(boardType);
 			}
 		});
 

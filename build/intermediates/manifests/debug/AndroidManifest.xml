@@ -126,6 +126,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
         </activity>
+        <activity
+            android:name="com.sachinda.myfirstapp.BoardType"
+            android:label="@string/title_activity_board_type"
+            android:parentActivityName="com.sachinda.myfirstapp.StartScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sachinda.myfirstapp.StartScreen" />
+        </activity>
     </application>
 
 </manifest>

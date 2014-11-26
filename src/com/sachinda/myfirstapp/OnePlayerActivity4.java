@@ -70,7 +70,7 @@ public class OnePlayerActivity4 extends Activity implements
             setContentView(R.layout.activity_one_player_activity2);
         }
         nextGame = new Intent(OnePlayerActivity4.this, OnePlayerActivity5.class);
-        end = new Intent(OnePlayerActivity4.this, StartScreen.class);
+        end = new Intent(OnePlayerActivity4.this, BoardType.class);
 
 //		Context context = getApplicationContext();
 //		CharSequence text = "Activity 4";

@@ -66,13 +66,13 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
 
         int style = ((GlobalVariable) this.getApplication()).getStyle();
         if (style == 1) {
-            setContentView(R.layout.game_start);
+            setContentView(R.layout.activity_four_in_to_four_two_player);
         } else if (style == 2) {
             setContentView(R.layout.activity_one_player_activity3);
         }
 
         intent = getIntent();
-        end = new Intent(FourInToFourTwoPlayer.this, StartScreen.class);
+        end = new Intent(FourInToFourTwoPlayer.this, BoardType.class);
 
         one = (Button) findViewById(R.id.empty_button);
         two = (Button) findViewById(R.id.empty_button2);
@@ -577,9 +577,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                     fiveChk = true;
                     if (counter == 0) {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecircle);
+                            v.setBackgroundResource(R.drawable.blacksquarecircle);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecircle);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
@@ -615,9 +615,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
                     } else {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecross);
+                            v.setBackgroundResource(R.drawable.blacksquarecross);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecross);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
@@ -662,9 +662,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                     sixChk = true;
                     if (counter == 0) {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.blacksquarecircle);
+                            v.setBackgroundResource(R.drawable.redsquarecircle);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bswhitesquarecircle);
+                            v.setBackgroundResource(R.drawable.bsbluesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
@@ -705,9 +705,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
                     } else {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.blacksquarecross);
+                            v.setBackgroundResource(R.drawable.redsquarecross);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bswhitesquarecross);
+                            v.setBackgroundResource(R.drawable.bsbluesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
@@ -757,9 +757,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                     sevenChk = true;
                     if (counter == 0) {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecircle);
+                            v.setBackgroundResource(R.drawable.blacksquarecircle);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecircle);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
@@ -801,9 +801,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
                     } else {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecross);
+                            v.setBackgroundResource(R.drawable.blacksquarecross);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecross);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
@@ -854,9 +854,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                     eightChk = true;
                     if (counter == 0) {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.blacksquarecircle);
+                            v.setBackgroundResource(R.drawable.redsquarecircle);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bswhitesquarecircle);
+                            v.setBackgroundResource(R.drawable.bsbluesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
@@ -892,9 +892,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
                     } else {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.blacksquarecross);
+                            v.setBackgroundResource(R.drawable.redsquarecross);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bswhitesquarecross);
+                            v.setBackgroundResource(R.drawable.bsbluesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
@@ -1025,9 +1025,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                     tenChk = true;
                     if (counter == 0) {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecircle);
+                            v.setBackgroundResource(R.drawable.blacksquarecircle);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecircle);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
@@ -1069,9 +1069,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
                     } else {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecross);
+                            v.setBackgroundResource(R.drawable.blacksquarecross);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecross);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
@@ -1209,9 +1209,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                     twelveChk = true;
                     if (counter == 0) {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecircle);
+                            v.setBackgroundResource(R.drawable.blacksquarecircle);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecircle);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
@@ -1247,9 +1247,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
                     } else {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecross);
+                            v.setBackgroundResource(R.drawable.blacksquarecross);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecross);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
@@ -1295,9 +1295,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                     thirteenChk = true;
                     if (counter == 0) {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecircle);
+                            v.setBackgroundResource(R.drawable.blacksquarecircle);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecircle);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
@@ -1339,9 +1339,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
                     } else {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecross);
+                            v.setBackgroundResource(R.drawable.blacksquarecross);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecross);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);
@@ -1479,9 +1479,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                     fifteenChk = true;
                     if (counter == 0) {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecircle);
+                            v.setBackgroundResource(R.drawable.blacksquarecircle);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecircle);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecircle);
                         }
                         counter++;
                         v.setTag(circle);
@@ -1517,9 +1517,9 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                         }
                     } else {
                         if (style == 1) {
-                            v.setBackgroundResource(R.drawable.redsquarecross);
+                            v.setBackgroundResource(R.drawable.blacksquarecross);
                         } else if (style == 2) {
-                            v.setBackgroundResource(R.drawable.bsbluesquarecross);
+                            v.setBackgroundResource(R.drawable.bswhitesquarecross);
                         }
                         counter--;
                         v.setTag(cross);

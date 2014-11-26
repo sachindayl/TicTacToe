@@ -73,7 +73,7 @@ public class OnePlayerActivity extends Activity implements View.OnClickListener 
 		}
 
 		nextGame = new Intent(OnePlayerActivity.this, OnePlayerActivity2.class );
-		end = new Intent(OnePlayerActivity.this, StartScreen.class);
+		end = new Intent(OnePlayerActivity.this, BoardType.class);
 		
 //		Context context = getApplicationContext();
 //		CharSequence text = "Activity 1";

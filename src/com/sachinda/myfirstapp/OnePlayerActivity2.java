@@ -71,7 +71,7 @@ public class OnePlayerActivity2 extends Activity implements
         }
 
         nextGame = new Intent(OnePlayerActivity2.this, OnePlayerActivity3.class);
-        end = new Intent(OnePlayerActivity2.this, StartScreen.class);
+        end = new Intent(OnePlayerActivity2.this, BoardType.class);
 
 //		Context context = getApplicationContext();
 //		CharSequence text = "Activity 2";
