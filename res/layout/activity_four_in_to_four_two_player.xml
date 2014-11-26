@@ -9,14 +9,10 @@
         android:id="@+id/empty_button"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginStart="200"
-        android:background="@drawable/customemptybutton"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="200dp"
+        android:background="@drawable/customEmptyButton"
         android:layout_marginTop="200dp" />
-
-    //android:layout_alignBaseline="@+id/empty_button3"
-    //android:layout_alignBottom="@+id/empty_button3"
-    //android:layout_alignLeft="@+id/empty_button4"
 
 
     <Button
@@ -24,11 +20,12 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_above="@+id/empty_button5"
-        android:background="@drawable/customemptybutton2"
+        android:background="@drawable/customEmptyButton2"
         android:gravity="center"
-        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
         android:layout_alignParentTop="false"
-        android:layout_toRightOf="@+id/empty_button"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/empty_button"
         android:layout_alignTop="@+id/empty_button"
         android:layout_alignBottom="@+id/empty_button" />
 
@@ -37,8 +34,9 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_above="@+id/empty_button5"
-        android:layout_toRightOf="@+id/empty_button2"
-        android:background="@drawable/customemptybutton"
+        android:layout_toEndOf="@+id/empty_button2"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/customEmptyButton"
         android:layout_alignTop="@+id/empty_button2"
         android:layout_alignBottom="@+id/empty_button2" />
 
@@ -46,10 +44,12 @@
         android:id="@+id/empty_button4"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:background="@drawable/customemptybutton2"
+        android:background="@drawable/customEmptyButton2"
         android:layout_alignTop="@+id/empty_button3"
-        android:layout_toRightOf="@+id/empty_button3"
-        android:layout_alignBottom="@+id/empty_button3" />
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/empty_button3"
+        android:layout_alignBottom="@+id/empty_button3"
+        android:layout_above="@+id/empty_button8" />
 
     <Button
         android:id="@+id/empty_button5"
@@ -58,9 +58,9 @@
         android:layout_alignParentBottom="false"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="144dp"
-        android:background="@drawable/customemptybutton"
+        android:background="@drawable/customEmptyButton2"
         android:layout_below="@+id/empty_button"
-        android:layout_alignLeft="@+id/empty_button" />
+        android:layout_alignStart="@+id/empty_button" />
 
     <Button
         android:id="@+id/empty_button6"
@@ -68,8 +68,8 @@
         android:layout_height="75dp"
         android:layout_alignBaseline="@+id/empty_button5"
         android:layout_alignBottom="@+id/empty_button5"
-        android:background="@drawable/customemptybutton2"
-        android:layout_toRightOf="@+id/empty_button5"
+        android:background="@drawable/customEmptyButton"
+        android:layout_toEndOf="@+id/empty_button5"
         android:layout_below="@+id/empty_button2" />
 
     <Button
@@ -77,60 +77,63 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_below="@+id/empty_button3"
-        android:layout_toLeftOf="@+id/empty_button8"
-        android:background="@drawable/customemptybutton"
-        android:layout_toRightOf="@+id/empty_button6" />
+        android:layout_toStartOf="@+id/empty_button8"
+        android:background="@drawable/customEmptyButton2"
+        android:layout_toEndOf="@+id/empty_button6" />
 
     <Button
         android:id="@+id/empty_button8"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:background="@drawable/customemptybutton2"
+        android:background="@drawable/customEmptyButton"
         android:layout_below="@+id/empty_button3"
         android:layout_toRightOf="@+id/empty_button3"
-        android:layout_toEndOf="@+id/empty_button3" />
+        android:layout_toEndOf="@+id/empty_button3"
+        android:layout_alignEnd="@+id/empty_button4" />
 
     <Button
         android:id="@+id/empty_button9"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_alignLeft="@+id/empty_button5"
-        android:background="@drawable/customemptybutton"
+        android:layout_alignStart="@+id/empty_button5"
+        android:background="@drawable/customEmptyButton"
         android:layout_below="@+id/empty_button6"
-        android:layout_toRightOf="@+id/empty_button10" />
+        android:layout_toEndOf="@+id/empty_button10" />
 
     <Button
         android:id="@+id/empty_button10"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_below="@+id/empty_button6"
-        android:background="@drawable/customemptybutton"
-        android:layout_toRightOf="@+id/empty_button5" />
+        android:background="@drawable/customEmptyButton2"
+        android:layout_toEndOf="@+id/empty_button5" />
 
     <Button
         android:id="@+id/empty_button11"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_below="@+id/empty_button7"
-        android:background="@drawable/customemptybutton"
-        android:layout_toRightOf="@+id/empty_button10" />
+        android:background="@drawable/customEmptyButton"
+        android:layout_toEndOf="@+id/empty_button10" />
 
     <Button
         android:id="@+id/empty_button12"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_below="@+id/empty_button8"
-        android:background="@drawable/customemptybutton"
-        android:layout_toRightOf="@+id/empty_button7" />
+        android:background="@drawable/customEmptyButton2"
+        android:layout_toEndOf="@+id/empty_button7"
+        android:layout_alignEnd="@+id/empty_button8" />
 
     <Button
         android:id="@+id/empty_button13"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:background="@drawable/customemptybutton"
-        android:layout_below="@+id/empty_button9"
+        android:background="@drawable/customEmptyButton2"
         android:layout_toEndOf="@+id/empty_button14"
-        android:layout_toLeftOf="@+id/empty_button10" />
+        android:layout_alignStart="@+id/empty_button9"
+        android:layout_below="@+id/empty_button9"
+        android:layout_alignBottom="@+id/empty_button14" />
 
 
 
@@ -138,20 +141,29 @@
         android:id="@+id/empty_button16"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:background="@drawable/customemptybutton"
+        android:background="@drawable/customEmptyButton"
         android:layout_toEndOf="@+id/empty_button7"
         android:layout_alignStart="@+id/empty_button8"
         android:layout_below="@+id/empty_button12"
-        android:layout_alignRight="@+id/empty_button12" />
+        android:layout_alignEnd="@+id/empty_button12" />
+
+    <Button
+        android:id="@+id/empty_button14"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/customEmptyButton"
+        android:layout_alignEnd="@+id/empty_button10"
+        android:layout_below="@+id/empty_button10"
+        android:layout_alignStart="@+id/empty_button10" />
 
     <Button
         android:id="@+id/empty_button15"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:background="@drawable/customemptybutton"
+        android:background="@drawable/customEmptyButton2"
         android:layout_alignParentEnd="false"
         android:layout_below="@+id/empty_button11"
-        android:layout_toRightOf="@+id/empty_button10" />
+        android:layout_toEndOf="@+id/empty_button10" />
 
     <RelativeLayout
         android:layout_width="wrap_content"

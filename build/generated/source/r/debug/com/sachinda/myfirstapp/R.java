@@ -888,8 +888,8 @@ containing a value of this type.
         public static final int computersturn=0x7f020074;
         public static final int computerwins=0x7f020075;
         public static final int custombutton=0x7f020076;
-        public static final int customemptybutton=0x7f020077;
-        public static final int customemptybutton2=0x7f020078;
+        public static final int customEmptyButton =0x7f020077;
+        public static final int customEmptyButton2 =0x7f020078;
         public static final int customexitbutton=0x7f020079;
         public static final int customsettingsbutton=0x7f02007a;
         public static final int draw=0x7f02007b;
