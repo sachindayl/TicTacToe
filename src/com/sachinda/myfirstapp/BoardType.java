@@ -38,7 +38,7 @@ public class BoardType extends Activity {
         if (style == 1) {
             setContentView(R.layout.activity_board_type);
         } else if (style == 2) {
-            setContentView(R.layout.fairy_tale_start_screen);
+            setContentView(R.layout.activity_board_type_fairy);
         }
 
         threeIntoThreeBtn = (Button) findViewById(R.id.threex3riptide_button);

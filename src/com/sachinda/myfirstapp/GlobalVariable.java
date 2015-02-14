@@ -1,25 +1,25 @@
 package com.sachinda.myfirstapp;
 
-import java.util.Random;
-
 import android.app.Application;
 
+import java.util.Random;
+
 public class GlobalVariable extends Application {
-	private int style = 1;
-	
-	public int randomNumber() {
+    private int style = 1;
 
-		Random rn = new Random();
-		int randomNum = rn.nextInt((9 - 1) + 1) + 1;
+    public int randomNumber() {
 
-		return randomNum;
-	}
-	
-	public int getStyle(){
-		return style;
-	}
-	
-	public void setStyle(int style){
-		this.style = style;
-	}
+        Random rn = new Random();
+        int randomNum = rn.nextInt((9 - 1) + 1) + 1;
+
+        return randomNum;
+    }
+
+    public int getStyle() {
+        return style;
+    }
+
+    public void setStyle(int style) {
+        this.style = style;
+    }
 }

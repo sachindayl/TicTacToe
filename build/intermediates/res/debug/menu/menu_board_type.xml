@@ -4,4 +4,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>
-<!-- From: file:/media/sachinda/VolumeOne/workspace/TicTacToe/res/menu/menu_board_type.xml -->
+<!-- From: file:/G:/Windows%20use/workspace/tictactoe/res/menu/menu_board_type.xml -->

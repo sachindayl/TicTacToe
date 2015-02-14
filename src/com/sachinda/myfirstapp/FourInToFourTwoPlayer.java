@@ -68,7 +68,7 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
         if (style == 1) {
             setContentView(R.layout.activity_four_in_to_four_two_player);
         } else if (style == 2) {
-            setContentView(R.layout.activity_one_player_activity3);
+            setContentView(R.layout.activity_four_in_to_four_two_player_fairy);
         }
 
         intent = getIntent();
@@ -997,7 +997,7 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
@@ -1051,7 +1051,7 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
@@ -1095,12 +1095,12 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
                                     || !twelveChk || !thirteenChk || !fourteenChk
-                                    || !fifteenChk || !sixteenChk ) {
+                                    || !fifteenChk || !sixteenChk) {
                                 p1.startAnimation(p1turn);
                             } else {
 
@@ -1181,12 +1181,12 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
                                     || !twelveChk || !thirteenChk || !fourteenChk
-                                    || !fifteenChk || !sixteenChk ) {
+                                    || !fifteenChk || !sixteenChk) {
                                 p1.startAnimation(p1turn);
                             } else {
 
@@ -1267,12 +1267,12 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
                                     || !twelveChk || !thirteenChk || !fourteenChk
-                                    || !fifteenChk || !sixteenChk ) {
+                                    || !fifteenChk || !sixteenChk) {
                                 p1.startAnimation(p1turn);
                             } else {
 
@@ -1321,7 +1321,7 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
@@ -1365,12 +1365,12 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
                                     || !twelveChk || !thirteenChk || !fourteenChk
-                                    || !fifteenChk || !sixteenChk ) {
+                                    || !fifteenChk || !sixteenChk) {
                                 p1.startAnimation(p1turn);
                             } else {
 
@@ -1451,12 +1451,12 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
                                     || !twelveChk || !thirteenChk || !fourteenChk
-                                    || !fifteenChk || !sixteenChk ) {
+                                    || !fifteenChk || !sixteenChk) {
                                 p1.startAnimation(p1turn);
                             } else {
 
@@ -1499,7 +1499,7 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
@@ -1537,12 +1537,12 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
                                     || !twelveChk || !thirteenChk || !fourteenChk
-                                    || !fifteenChk || !sixteenChk ) {
+                                    || !fifteenChk || !sixteenChk) {
                                 p1.startAnimation(p1turn);
                             } else {
 
@@ -1591,7 +1591,7 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
@@ -1635,12 +1635,12 @@ public class FourInToFourTwoPlayer extends Activity implements View.OnClickListe
                             disableAllButtons();
 
                             delayDialog();
-                        }else {
+                        } else {
                             if (!oneChk || !twoChk || !threeChk || !fourChk
                                     || !fiveChk || !sixChk || !sevenChk
                                     || !eightChk || !nineChk || !tenChk || !elevenChk
                                     || !twelveChk || !thirteenChk || !fourteenChk
-                                    || !fifteenChk || !sixteenChk ) {
+                                    || !fifteenChk || !sixteenChk) {
                                 p1.startAnimation(p1turn);
                             } else {
 

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sachinda.myfirstapp"
-    android:versionCode="6"
-    android:versionName="1.4" >
+    android:versionCode="7"
+    android:versionName="1.5">
 
     <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="20" />
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
 
-    <android:uses-permission
+    <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission
+        android:maxSdkVersion="21" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
+        android:maxSdkVersion="21" />
 
     <application
         android:name="com.sachinda.myfirstapp.GlobalVariable"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.TicTacToe" >
+        android:theme="@style/Theme.TicTacToe">
         <activity
             android:name="com.sachinda.myfirstapp.SplashScreen"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,7 +35,7 @@
         <activity
             android:name="com.sachinda.myfirstapp.StartScreen"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.sachinda.CLEARSCREEN" />
 
@@ -46,7 +46,7 @@
             android:name="com.sachinda.myfirstapp.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName="com.sachinda.myfirstapp.StartScreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
@@ -55,7 +55,7 @@
             android:name="com.sachinda.myfirstapp.TwoPlayerActivity"
             android:label="@string/start_game"
             android:parentActivityName="com.sachinda.myfirstapp.StartScreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
@@ -64,7 +64,7 @@
             android:name="com.sachinda.myfirstapp.OnePlayerActivity"
             android:label="@string/title_activity_one_player"
             android:parentActivityName="com.sachinda.myfirstapp.StartScreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
@@ -73,7 +73,7 @@
             android:name="com.sachinda.myfirstapp.OnePlayerActivity2"
             android:label="@string/title_activity_one_player_activity2"
             android:parentActivityName="com.sachinda.myfirstapp.StartScreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
@@ -82,7 +82,7 @@
             android:name="com.sachinda.myfirstapp.OnePlayerActivity3"
             android:label="@string/title_activity_one_player_activity3"
             android:parentActivityName="com.sachinda.myfirstapp.StartScreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
@@ -91,7 +91,7 @@
             android:name="com.sachinda.myfirstapp.OnePlayerActivity4"
             android:label="@string/title_activity_one_player_activity4"
             android:parentActivityName="com.sachinda.myfirstapp.StartScreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
@@ -100,7 +100,7 @@
             android:name="com.sachinda.myfirstapp.OnePlayerActivity5"
             android:label="@string/title_activity_one_player_activityfive"
             android:parentActivityName="com.sachinda.myfirstapp.StartScreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
@@ -109,19 +109,18 @@
             android:name="com.sachinda.myfirstapp.OnePlayerActivity6"
             android:label="@string/title_activity_one_player_activity6"
             android:parentActivityName="com.sachinda.myfirstapp.StartScreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
         </activity>
         <activity
             android:name="com.sachinda.myfirstapp.Multiplayer"
-            android:label="@string/title_activity_multiplayer" >
-        </activity>
+            android:label="@string/title_activity_multiplayer"></activity>
         <activity
             android:name="com.sachinda.myfirstapp.FourInToFourTwoPlayer"
             android:label="@string/title_activity_four_in_to_four_two_player"
-            android:parentActivityName="com.sachinda.myfirstapp.StartScreen" >
+            android:parentActivityName="com.sachinda.myfirstapp.StartScreen">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />
@@ -129,7 +128,7 @@
         <activity
             android:name="com.sachinda.myfirstapp.BoardType"
             android:label="@string/title_activity_board_type"
-            android:parentActivityName="com.sachinda.myfirstapp.StartScreen" >
+            android:parentActivityName="com.sachinda.myfirstapp.StartScreen">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sachinda.myfirstapp.StartScreen" />

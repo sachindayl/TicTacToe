@@ -13,7 +13,7 @@
         android:src="@drawable/mainpage"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY" />
 
     <Button
         android:id="@+id/fourx4riptide_button"

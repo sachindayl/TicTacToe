@@ -1,0 +1,4 @@
+G:\Windows use\workspace\tictactoe\build\intermediates\classes\release
+G:\Windows use\workspace\tictactoe\build\intermediates\pre-dexed\release\classes-8a4bc4a0e515ecfd338edb45cbab4ff7cf4872d2.jar
+G:\Windows use\workspace\tictactoe\build\intermediates\pre-dexed\release\android-support-v7-appcompat-2a6452ea6eb7182ec6d1bd8e0c499d00981f99ec.jar
+G:\Windows use\workspace\tictactoe\build\intermediates\pre-dexed\release\android-support-v4-4da8f99d560e967667b5c56dd78dd2f596647531.jar

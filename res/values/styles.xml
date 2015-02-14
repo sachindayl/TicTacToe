@@ -16,7 +16,7 @@
     <style name="Theme.TicTacToe" parent="@Theme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
-    <item name="android:windowBackground">@drawable/gameboard2</item>
+        <item name="android:windowBackground">@drawable/gameboard2</item>
     </style>
 
 </resources>

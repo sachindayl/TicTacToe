@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bsbluesquare"></item>
+
+</selector>
+<!-- From: file:/G:/Windows%20use/workspace/tictactoe/res/drawable/bluesquare.xml -->
